@@ -12,20 +12,54 @@ import java.util.ListIterator;
  */
 public class LinkedList implements List<Node>{
     //Atibutos clase LinkedList
-
+    Node nodo;
     Node head=null;
     Node tail=null;
-    int size;
-    int index=0;
+    double size;
+
 
     public LinkedList(){
-        this.size=0;
+        size=0.0;
     }
 
     //Tamano LinkedList
     public int size() {
-        return size;
+        return 0;
     }
+
+    public double longi(){
+        return this.size;
+    }
+
+    public Node getN(){
+        return nodo;
+    }
+
+    public Node getHead(){
+        return head;
+    }
+
+    public Node getTail(){
+        return tail;
+    }
+
+    public void add(int index, Node node) {
+        if(this.head==null){
+            head=node;
+            tail=node;
+            size+=1;
+        }else{
+            tail.setNext(node);
+            node.setPrior(this.tail);
+            tail=node;
+            size+=1;
+        }
+
+    }
+
+
+
+
 
     public boolean isEmpty() {
         return false;
@@ -71,29 +105,13 @@ public class LinkedList implements List<Node>{
         return null;
     }
 
-    public void add(int index, Node node) {
-        if(this.head==null && this.tail==null){
-            this.head=node;
-            this.tail=node;
-            node.setIndex(size);
-            size+=1;
-        }else{
-            this.tail.setNext(node);
-            node.setPrior(this.tail);
-            node.setIndex(size);
-            this.tail=node;
-            size+=1;
-        }
 
-    }
 
 
 
     public Node remove(int index) {
-        if(index==0){
-            this.head=this.head.getNext();
-        }
-        return this.tail;
+    return nodo;
+
     }
 
     public int indexOf(Object o) {

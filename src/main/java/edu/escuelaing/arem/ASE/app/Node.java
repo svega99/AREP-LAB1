@@ -7,16 +7,12 @@ public class  Node{
     private double dat;
     private Node next;
     private Node  prior;
-    private int index;
 
 
-    public Node( double dat, Node next, Node prior,int index){
+
+
+    public Node( double dat){
         this.dat=dat;
-        this.next=next;
-        this.prior=prior;
-        this.index=index;
-
-
     }
 
     public double getDat(){
@@ -44,11 +40,5 @@ public class  Node{
         this.prior = prior;
     }
 
-    public int getIndex() {
-        return index;
-    }
 
-    public void setIndex(int index) {
-        this.index = index;
-    }
 }
