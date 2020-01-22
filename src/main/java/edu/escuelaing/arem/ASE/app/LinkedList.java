@@ -19,7 +19,7 @@ public class LinkedList implements List<Node>{
     int index=0;
 
     public LinkedList(){
-        size=0;
+        this.size=0;
     }
 
     //Tamano LinkedList
@@ -86,6 +86,8 @@ public class LinkedList implements List<Node>{
         }
 
     }
+
+
 
     public Node remove(int index) {
         if(index==0){
