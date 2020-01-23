@@ -38,7 +38,7 @@ public class LinkedList implements List<Node>{
         boolean flag=false;
         Node nodo = head;
         while (flag==false) {
-            if (index!=nodo.getIndex()) {
+            if (index != nodo.getIndex()) {
                 nodo=nodo.getNext();
                 flag= false;
             } else {
@@ -47,8 +47,6 @@ public class LinkedList implements List<Node>{
         }
         return nodo;
     }
-
-
     /**
      * Metodo que calcula el tamano de linked list
      * return tamano de la lista
@@ -58,22 +56,23 @@ public class LinkedList implements List<Node>{
     }
 
 
+    /**
+     * Metodo para acceder a la cabeza de la lista
+     * @return head
+     */
     public Node getHead(){
         return head;
     }
 
+    /**
+     * Metodo para obtener la cola de la lista
+     * @return
+     */
     public Node getTail(){
         return tail;
     }
-    public boolean remove(Node node) {
-        if(this.tail!=null && this.head!=null && node.getIndex()==this.tail.getIndex()){
 
-
-        }
-        return false;
-    }
-    /**
-     * Metodo para agregar un nuevo nodo
+    /**Metodo para agregar un nuevo nodo
      * @param node
      * @return booleano si se aagrega el nodo
      */
@@ -88,33 +87,26 @@ public class LinkedList implements List<Node>{
             node.setIndex(size);
             this.tail = node;
         }
-        size+=1;
+        size= size+1;
         return true;
     }
 
+    /**
+     * Metodo para remover el ultimo nodo de la linked list
+     * @param index
+     * @return
+     */
+    public Node remove(int index) {
+        if (this.tail.getIndex()==nodo.getIndex() && nodo.getIndex()==index){
+            this.tail=nodo.getPrior();
+            size-=1;
+        }
+        return nodo;
+
+    }
     public boolean remove(Object o) {
         return false;
     }
-
-    public void add(int index, Node node) {
-        if(this.head==null){
-            head=node;
-            tail=node;
-            size+=1;
-        }else{
-            tail.setNext(node);
-            node.setPrior(tail);
-            tail=node;
-            size+=1;
-        }
-
-    }
-
-
-
-
-
-
 
     public boolean isEmpty() {
         return false;
@@ -132,10 +124,6 @@ public class LinkedList implements List<Node>{
         return new Object[0];
     }
 
-
-
-
-
     public boolean addAll(Collection c) {
         return false;
     }
@@ -148,18 +136,10 @@ public class LinkedList implements List<Node>{
 
     }
 
-
-
     public Node set(int index, Node node) {
         return null;
     }
-
-
-
-
-
-    public Node remove(int index) {
-    return nodo;
+    public void add(int index, Node element) {
 
     }
 

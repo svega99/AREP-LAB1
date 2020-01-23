@@ -27,7 +27,6 @@ public class Calculator {
          media=sum/vector.size();
         return media;
     }
-
     /**
      * Metodo que calcula la desviacion estandar
      * @param vector
@@ -37,14 +36,10 @@ public class Calculator {
         res=0;
         desv=0;
         for(int i=0; i<vector.size();i++){
-
             res+=Math.pow(vector.get(i).getDat()-media(vector),2);
         }
         desv=Math.sqrt(res/vector.size()-1);
-
         return desv;
-
-
     }
 
 
