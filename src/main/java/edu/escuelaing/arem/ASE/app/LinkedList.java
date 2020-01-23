@@ -12,28 +12,51 @@ import java.util.ListIterator;
  */
 public class LinkedList implements List<Node>{
     //Atibutos clase LinkedList
-    Node nodo;
-    Node head=null;
-    Node tail=null;
-    double size;
+     Node nodo;
+     Node head;
+     Node tail;
+     int size;
 
 
     public LinkedList(){
-        size=0.0;
+        this.size=0;
     }
-
-    //Tamano LinkedList
-    public int size() {
-        return 0;
-    }
-
-    public double longi(){
-        return this.size;
-    }
-
-    public Node getN(){
+    public Node getNode(){
         return nodo;
     }
+
+    public void setNode(Node nodo){
+        this.nodo=nodo;
+    }
+
+    /**
+     * Metodo para hallar el nodo segun su indice
+     * @param index
+     * @return Retorna el nodo al cual se desea acceder
+     */
+    public Node get(int index) {
+        boolean flag=false;
+        Node nodo = head;
+        while (flag==false) {
+            if (index!=nodo.getIndex()) {
+                nodo=nodo.getNext();
+                flag= false;
+            } else {
+                flag=true;
+            }
+        }
+        return nodo;
+    }
+
+
+    /**
+     * Metodo que calcula el tamano de linked list
+     * return tamano de la lista
+     */
+    public int size() {
+        return size;
+    }
+
 
     public Node getHead(){
         return head;
@@ -41,6 +64,36 @@ public class LinkedList implements List<Node>{
 
     public Node getTail(){
         return tail;
+    }
+    public boolean remove(Node node) {
+        if(this.tail!=null && this.head!=null && node.getIndex()==this.tail.getIndex()){
+
+
+        }
+        return false;
+    }
+    /**
+     * Metodo para agregar un nuevo nodo
+     * @param node
+     * @return booleano si se aagrega el nodo
+     */
+    public boolean add(Node node) {
+        if (this.head == null && this.tail==null) {
+            this.head= node;
+            this.tail= node;
+            node.setIndex(size);
+        } else {
+            this.tail.setNext(node);
+            node.setPrior(this.tail);
+            node.setIndex(size);
+            this.tail = node;
+        }
+        size+=1;
+        return true;
+    }
+
+    public boolean remove(Object o) {
+        return false;
     }
 
     public void add(int index, Node node) {
@@ -50,12 +103,14 @@ public class LinkedList implements List<Node>{
             size+=1;
         }else{
             tail.setNext(node);
-            node.setPrior(this.tail);
+            node.setPrior(tail);
             tail=node;
             size+=1;
         }
 
     }
+
+
 
 
 
@@ -77,13 +132,9 @@ public class LinkedList implements List<Node>{
         return new Object[0];
     }
 
-    public boolean add(Node node) {
-        return false;
-    }
 
-    public boolean remove(Object o) {
-        return false;
-    }
+
+
 
     public boolean addAll(Collection c) {
         return false;
@@ -97,9 +148,7 @@ public class LinkedList implements List<Node>{
 
     }
 
-    public Node get(int index) {
-        return null;
-    }
+
 
     public Node set(int index, Node node) {
         return null;

@@ -3,46 +3,52 @@ package edu.escuelaing.arem.ASE.app;
 public class Calculator {
 
     private LinkedList vector;
-    private double cont;
+    private double sum;
     private double media;
-    private double rest;
-    private double desviacion;
+    private double res;
+    private double desv;
 
 
     public Calculator(){
         vector= new LinkedList();
     }
 
-    public double sum(LinkedList vector){
-        cont=0;
-        for(int i=0 ; i<vector.longi();i++){
-            cont+=vector.getN().getDat();
-            System.out.println(vector.getN().getDat());
-        }
-        return cont;
-    }
+    /**
+     * Metdodo para calcular la media
+     * @param vector
+     * @return el valor de la media
+     */
     public double media(LinkedList vector){
+        sum=0;
         media=0;
-        media=sum(vector)/vector.longi();
-        return media;
-
-    }
-
-    public double rest(LinkedList vector){
-        rest=0;
-        for(int i=0;i<vector.size();i++){
-            rest+=Math.pow(vector.get(i).getDat()-media,2);
+        for(int i=0 ; i<vector.size();i++){
+            sum+=vector.get(i).getDat();
         }
-        return rest;
-
-    }
-    public double desviacion (LinkedList vector){
-        desviacion=0;
-        desviacion=Math.sqrt(rest/vector.size()-1);
-        return desviacion;
-
-
+         media=sum/vector.size();
+        return media;
     }
 
+    /**
+     * Metodo que calcula la desviacion estandar
+     * @param vector
+     * @return desviacion estandar
+     */
+    public double desviacion(LinkedList vector){
+        res=0;
+        desv=0;
+        for(int i=0; i<vector.size();i++){
 
-}
+            res+=Math.pow(vector.get(i).getDat()-media(vector),2);
+        }
+        desv=Math.sqrt(res/vector.size()-1);
+
+        return desv;
+
+
+    }
+
+
+    }
+
+
+
