@@ -12,3 +12,6 @@ Las pruebas se encuentran en la clase CalculatorTest , estas pueden ser ejecutad
 
 ### Autor
 <a href="https://github.com/julianagarzond"> Juliana Garzón Duque </a>
+
+### Lenguaje de construcción
+Java v.8 
