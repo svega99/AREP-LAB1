@@ -29,7 +29,7 @@ public class  Node{
 
     /**
      * Metodo para modificar el dato
-     * @param dat
+     * @param dat dato que contiene el nodo
      *
      */
     public void setDat(double dat){
@@ -46,7 +46,7 @@ public class  Node{
 
     /**
      * Metodo para modificar el siguiente nodo
-     * @param next
+     * @param next el siguiente nodo 
      */
     public void setNext(Node next) {
         this.next = next;
@@ -63,7 +63,7 @@ public class  Node{
 
     /**
      * Modificar el nodo anterior
-     * @param prior
+     * @param prior siguiente nodo
      */
 
     public void setPrior(Node prior) {
@@ -72,7 +72,7 @@ public class  Node{
 
     /**
      * Obtener el indice del nodo
-     * @return index
+     * @return index 
      */
 
 
@@ -82,7 +82,7 @@ public class  Node{
 
     /**
      * Modificar indice
-     * @param index
+     * @param index cindice 
      */
     public void setIndex(int index) {
         this.index = index;
@@ -90,7 +90,7 @@ public class  Node{
 
     /**
      * metodo para poder comparar dos objetos
-     * @param nodo
+     * @param nodo nodo 
      * @return booleano indicando si son iguales
      *
      */

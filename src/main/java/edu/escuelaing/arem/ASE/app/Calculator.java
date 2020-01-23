@@ -15,7 +15,7 @@ public class Calculator {
 
     /**
      * Metdodo para calcular la media
-     * @param vector
+     * @param vector El vector es la linked list
      * @return el valor de la media
      */
     public double media(LinkedList vector){
@@ -29,7 +29,7 @@ public class Calculator {
     }
     /**
      * Metodo que calcula la desviacion estandar
-     * @param vector
+     * @param vector El vector es la linked list
      * @return desviacion estandar
      */
     public double desviacion(LinkedList vector){

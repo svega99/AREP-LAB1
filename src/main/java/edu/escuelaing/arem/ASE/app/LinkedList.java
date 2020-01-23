@@ -31,7 +31,7 @@ public class LinkedList implements List<Node>{
 
     /**
      * Metodo para hallar el nodo segun su indice
-     * @param index
+     * @param index Indice del nodo 
      * @return Retorna el nodo al cual se desea acceder
      */
     public Node get(int index) {
@@ -66,14 +66,14 @@ public class LinkedList implements List<Node>{
 
     /**
      * Metodo para obtener la cola de la lista
-     * @return
+     * @return tail la cola de la LinkedList
      */
     public Node getTail(){
         return tail;
     }
 
     /**Metodo para agregar un nuevo nodo
-     * @param node
+     * @param node entra el nodo que se desea agregar 
      * @return booleano si se aagrega el nodo
      */
     public boolean add(Node node) {
@@ -93,8 +93,8 @@ public class LinkedList implements List<Node>{
 
     /**
      * Metodo para remover el ultimo nodo de la linked list
-     * @param index
-     * @return
+     * @param index indice del nodo que se desea remover
+     * @return nodo
      */
     public Node remove(int index) {
         if (this.tail.getIndex()==nodo.getIndex() && nodo.getIndex()==index){
