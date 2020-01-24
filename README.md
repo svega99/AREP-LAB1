@@ -6,7 +6,7 @@ El laboratorio consiste en implementar una Linked List propia con las funcionali
 ### Instalación 
 
 1. se descarga el repositorio desde el siguiente link  o por medio del cmd se clona mediante el comando "git clone" seguido del link https://github.com/julianagarzond/AREP-LAB1.git
-2. Para compilar el programa se debe hacer mediante el comando "mvn package" .
+2. Para compilar el programa se debe hacer mediante el comando ### "mvn package -e" .
 ### Pruebas
 Las pruebas se encuentran en la clase CalculatorTest , estas pueden ser ejecutadas mediante el comando "mvn package" u otra forma es mediante su editor favorito de JAVA correr la clase de test.
 
